@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Open Graph / Facebook / Instagram -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://Prestigepositioning.com/">
+    <meta property="og:title" content="StatusbuiltPR - Agency behind Texas's top realtors">
+    <meta property="og:description" content="StatusbuiltPR - Agency behind Texas's top realtors. Get featured in Forbes, Bloomberg, and major publications under the leadership of owner Daniel Martinez Grijalva.">
+    <meta property="og:image" content="Pressence Logos/PR-miami.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://Prestigepositioning.com/">
+    <meta property="twitter:title" content="StatusbuiltPR - Agency behind Texas's top realtors">
+    <meta property="twitter:description" content="StatusbuiltPR - Agency behind Texas's top realtors. Get featured in Forbes, Bloomberg, and major publications under the leadership of owner Daniel Martinez Grijalva.">
+    <meta property="twitter:image" content="Pressence Logos/PR-miami.jpg">
+    
+    <title>StatusbuiltPR - Agency behind Texas's top realtors</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Pressence-Logos/texas-logo.png">
+    <link rel="apple-touch-icon" href="Pressence-Logos/texas-logo.png">
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="Pressence-Logos/texas-logo.png" as="image">
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Saira+Condensed:wght@300;400;500;600;700&family=Saira+Extra+Condensed:wght@700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Saira+Condensed:wght@300;400;500;600;700&family=Saira+Extra+Condensed:wght@700;800;900&display=swap"></noscript>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Three.js and GSAP Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div id="progress-bar"></div>
+    <!-- Opening Animation Overlay -->
+    <div id="intro-overlay" class="intro-overlay">
+        <div class="intro-logo">
+            <img src="Pressence-Logos/texas-logo.png" alt="StatusbuiltPR" loading="eager" fetchpriority="high" decoding="sync" />
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="Pressence-Logos/texas-logo.png" alt="StatusbuiltPR" loading="eager" fetchpriority="high" decoding="sync" />
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#testimonials" class="nav-link">Results</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Chapter 1: Homepage (Horizontal) -->
+    <section id="home" class="chapter hero">
+        <div class="grain-overlay"></div>
+        <div class="home-horizontal">
+            <!-- Panel 1: Headline -->
+            <div class="panel panel-hero">
+                <div class="hero-content">
+                    <h1 class="hero-headline">
+                        <span class="line">When people know You,</span>
+                        <span class="line">You don't chase leads.</span>
+                        <span class="line">You attract them.</span>
+                    </h1>
+                    <div class="hero-cta">
+                        <button class="btn-primary" onclick="scrollToSection('about')">Enter the Story</button>
+                        <button class="btn-secondary" onclick="scrollToSection('testimonials')">See Real Results from Our Clients</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Panel 2: Quotes + Phone Stories -->
+            <div class="panel panel-quotes">
+                <div class="container">
+                    <div class="quotes-phone-row">
+						<div class="quotes-col">
+							<h2 class="quotes-kicker">DON'T JUST TAKE OUR WORD FOR IT,</h2>
+                            <div class="search-experience">
+                                <h3 class="search-headline">Use our StatusbuiltPR engine to check your visibility</h3>
+                                <form id="pressence-search-form" class="pressence-search-form" autocomplete="off">
+                                    <div class="form-row query-row">
+                                        <input type="text" id="pressenceFullName" class="pressence-input name" placeholder="Full Name" aria-label="Full Name" />
+                                        <button type="submit" class="btn-primary">Search</button>
+                                    </div>
+                                </form>
+
+                                <div id="pressence-results-card" class="pressence-results-card">
+                                    <div id="pressence-summary" class="pressence-summary"></div>
+                                </div>
+
+                                <!-- CSE script no longer rendered to DOM; serverless function summarizes results instead -->
+                            </div>
+							<h3 class="quotes-cta">SEE FOR YOURSELF!!!</h3>
+                        </div>
+                        <aside class="phone-col">
+                            <div id="phone-stories" class="phone-stories">
+                                <div class="phone-frame">
+                                    <img src="Background/PC/StatusbuiltPR_phone.png" alt="Phone frame" class="phone-frame-img" />
+                                    <div class="phone-screen">
+                                        <div class="story-track">
+                                            <div class="story-slide"><img src="More Testimonials Instagram story sized/allielutz.jpg" alt="Story - allielutz" /></div>
+                                            <div class="story-slide"><img src="More Testimonials Instagram story sized/chris cortazzo.jpg" alt="Story - chris cortazzo" /></div>
+                                            <div class="story-slide"><img src="More Testimonials Instagram story sized/lovetricialee.jpg" alt="Story - lovetricialee" /></div>
+                                            <div class="story-slide"><img src="More Testimonials Instagram story sized/Miachel Bacon.jpg" alt="Story - Miachel Bacon" /></div>
+                                            <div class="story-slide"><img src="More Testimonials Instagram story sized/Noah Merriby.jpg" alt="Story - Noah Merriby" /></div>
+                                            <div class="story-slide"><img src="More Testimonials Instagram story sized/richard blanco.jpg" alt="Story - richard blanco" /></div>
+                                            <div class="story-slide"><img src="More Testimonials Instagram story sized/tamarah.jpg" alt="Story - tamarah" /></div>
+                                            <div class="story-slide"><img src="More Testimonials Instagram story sized/thekingofmeamirealestate.jpg" alt="Story - thekingofmeamirealestate" /></div>
+                                            <div class="story-slide"><img src="More Testimonials Instagram story sized/thekingofmiami.jpg" alt="Story - thekingofmiami" /></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button id="skip-stories-btn" class="skip-stories-btn" type="button" aria-label="Skip stories to next section">Skip</button>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator"><div class="scroll-arrow"></div></div>
+    </section>
+
+    <!-- Immersive Constellation Section (inserted above WHERE YOU CAN BE) -->
+    <section id="press-constellation" class="chapter px-constellation">
+        <div class="container">
+            <div class="chapter-header">
+                <h2 class="chapter-title">Press Authority Constellation</h2>
+                <div class="chapter-line"></div>
+            </div>
+
+            <!-- Landing Screen -->
+            <div id="pxc-landing" class="pxc-screen active">
+                <div class="pxc-landing-card">
+                    <h3 class="pxc-landing-title">Where are you right now in your media presence?</h3>
+                    <div class="pxc-landing-actions">
+                        <button id="pxc-show-current" class="btn-secondary">Show current reality</button>
+                        <button id="pxc-show-future" class="btn-primary">Show where I can be</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Current State Screen -->
+            <div id="pxc-current" class="pxc-screen">
+                <div class="pxc-current-card">
+                    <h4 class="pxc-current-heading">This doesn't have to be your reality</h4>
+
+                    <div class="pxc-current-metrics">
+                        <div class="pxc-current-metric">
+                            <div class="pxc-metric-number">0</div>
+                            <div class="pxc-metric-label">Features</div>
+                        </div>
+                        <div class="pxc-current-metric">
+                            <div class="pxc-metric-number">0</div>
+                            <div class="pxc-metric-label">Authority</div>
+                        </div>
+                        <div class="pxc-current-metric">
+                            <div class="pxc-metric-number">0</div>
+                            <div class="pxc-metric-label">Recognition</div>
+                        </div>
+                        <div class="pxc-current-metric">
+                            <div class="pxc-metric-number">0</div>
+                            <div class="pxc-metric-label">Leads</div>
+                        </div>
+                    </div>
+
+                    <div class="pxc-empty-publications">
+                        <h5 class="pxc-empty-title">Your current "press coverage"</h5>
+                        <div class="pxc-empty-grid">
+                            <div class="pxc-empty-card">
+                                <div class="pxc-empty-name">Local Town Newsletter</div>
+                                <div class="pxc-empty-stats">127 subscribers • Minimal reach</div>
+                                <div class="pxc-empty-status">No features yet…</div>
+                            </div>
+                            <div class="pxc-empty-card">
+                                <div class="pxc-empty-name">Community Bulletin</div>
+                                <div class="pxc-empty-stats">89 subscribers • Neighborhood</div>
+                                <div class="pxc-empty-status">No features yet…</div>
+                            </div>
+                            <div class="pxc-empty-card">
+                                <div class="pxc-empty-name">Small Business Weekly</div>
+                                <div class="pxc-empty-stats">234 subscribers • Local</div>
+                                <div class="pxc-empty-status">No features yet…</div>
+                            </div>
+                            <div class="pxc-empty-card">
+                                <div class="pxc-empty-name">Neighborhood News</div>
+                                <div class="pxc-empty-stats">156 subscribers • Limited</div>
+                                <div class="pxc-empty-status">No features yet…</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pxc-reality-cta">
+                        <button id="pxc-to-constellation" class="btn-primary">Discover Your Media Potential</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Constellation Screen -->
+            <div id="pxc-constellation" class="pxc-screen">
+                <nav class="pxc-nav">
+                    <div class="pxc-tabs">
+                        <button class="pxc-tab active" data-tier="silver">Silver Galaxy<span class="pxc-tab-reach">2M+ Reach</span></button>
+                        <button class="pxc-tab" data-tier="gold">Gold Galaxy<span class="pxc-tab-reach">5M+ Reach</span></button>
+                        <button class="pxc-tab" data-tier="platinum">Platinum Galaxy<span class="pxc-tab-reach">10M+ Reach</span></button>
+                    </div>
+                </nav>
+
+                <div class="pxc-space">
+                    <div class="pxc-particles" aria-hidden="true"></div>
+
+                    <div class="pxc-galaxy active" data-tier="silver">
+                        <svg class="pxc-constellation" viewBox="0 0 800 500" role="img" aria-label="Silver constellation">
+                            <g class="pxc-lines">
+                                <line x1="120" y1="100" x2="200" y2="150" />
+                                <line x1="200" y1="150" x2="320" y2="120" />
+                                <line x1="320" y1="120" x2="450" y2="180" />
+                                <line x1="450" y1="180" x2="600" y2="140" />
+                            </g>
+                            <g class="pxc-stars">
+                                <circle class="pxc-star" cx="120" cy="100" r="12" data-publication="Medium"/>
+                                <circle class="pxc-star" cx="200" cy="150" r="12" data-publication="Time Bulletin"/>
+                                <circle class="pxc-star" cx="320" cy="120" r="12" data-publication="US Times Now"/>
+                                <circle class="pxc-star" cx="450" cy="180" r="12" data-publication="Globe Stats"/>
+                                <circle class="pxc-star" cx="600" cy="140" r="12" data-publication="Insta Bulletin"/>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="pxc-galaxy" data-tier="gold">
+                        <svg class="pxc-constellation" viewBox="0 0 800 500" role="img" aria-label="Gold constellation">
+                            <g class="pxc-lines">
+                                <line x1="80" y1="80" x2="150" y2="110" />
+                                <line x1="150" y1="110" x2="230" y2="90" />
+                                <line x1="230" y1="90" x2="320" y2="130" />
+                                <line x1="320" y1="130" x2="410" y2="100" />
+                                <line x1="410" y1="100" x2="500" y2="140" />
+                                <line x1="500" y1="140" x2="580" y2="110" />
+                            </g>
+                            <g class="pxc-stars">
+                                <circle class="pxc-star" cx="80" cy="80" r="12" data-publication="Digital Journal"/>
+                                <circle class="pxc-star" cx="150" cy="110" r="12" data-publication="Time Business News"/>
+                                <circle class="pxc-star" cx="230" cy="90" r="12" data-publication="Fox Interviewer"/>
+                                <circle class="pxc-star" cx="320" cy="130" r="12" data-publication="Voyage NY"/>
+                                <circle class="pxc-star" cx="410" cy="100" r="12" data-publication="London Reporter"/>
+                                <circle class="pxc-star" cx="500" cy="140" r="12" data-publication="Tech Bullion"/>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="pxc-galaxy" data-tier="platinum">
+                        <svg class="pxc-constellation" viewBox="0 0 800 500" role="img" aria-label="Platinum constellation">
+                            <g class="pxc-lines">
+                                <line x1="60" y1="60" x2="130" y2="90" />
+                                <line x1="130" y1="90" x2="210" y2="70" />
+                                <line x1="210" y1="70" x2="290" y2="100" />
+                                <line x1="290" y1="100" x2="370" y2="80" />
+                                <line x1="370" y1="80" x2="450" y2="110" />
+                            </g>
+                            <g class="pxc-stars">
+                                <circle class="pxc-star" cx="60" cy="60" r="12" data-publication="Forbes"/>
+                                <circle class="pxc-star" cx="130" cy="90" r="12" data-publication="Entrepreneur"/>
+                                <circle class="pxc-star" cx="210" cy="70" r="12" data-publication="NY Weekly"/>
+                                <circle class="pxc-star" cx="290" cy="100" r="12" data-publication="CEO Weekly"/>
+                                <circle class="pxc-star" cx="370" cy="80" r="12" data-publication="Wall Street Times"/>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="pxc-tooltip" id="pxc-tooltip" role="dialog" aria-hidden="true">
+                        <div class="pxc-tooltip-content">
+                            <div class="pxc-tooltip-header">
+                                <div class="pxc-tooltip-logo" aria-hidden="true"></div>
+                                <h3 class="pxc-tooltip-title"></h3>
+                            </div>
+                            <div class="pxc-tooltip-body">
+                                <p class="pxc-tooltip-client"></p>
+                                <p class="pxc-tooltip-date"></p>
+                                <p class="pxc-tooltip-reach"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="pxc-quotes" class="pxc-quotes" aria-hidden="true"></div>
+
+                <div class="pxc-metrics">
+                    <div class="pxc-metric"><div class="pxc-metric-number" data-target="50">0</div><div class="pxc-metric-label">Premium Features</div></div>
+                    <div class="pxc-metric"><div class="pxc-metric-text">Industry Leader</div><div class="pxc-metric-label">Authority Level</div></div>
+                    <div class="pxc-metric"><div class="pxc-metric-text">Global</div><div class="pxc-metric-label">Recognition</div></div>
+                    <div class="pxc-metric"><div class="pxc-metric-number" data-target="1000">0</div><div class="pxc-metric-label">Monthly Leads</div></div>
+                </div>
+
+                <div class="pxc-cta">
+                    <button class="btn-primary pxc-cta-btn" type="button">Start Your Journey</button>
+                </div>
+            </div>
+
+            <div id="pxc-toggle" class="pxc-compare-toggle" data-state="current">
+                <span class="pxc-toggle-text">Compare Before & After</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapter 2: This Is What We're About -->
+    <section id="about" class="chapter about">
+        <div class="container">
+            <div class="chapter-header">
+                <h2 class="chapter-title">WHERE YOU CAN BE</h2>
+                <div class="chapter-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="logo-slider-section">
+                    <h3>FEATURED</h3>
+                    <div class="logo-slider-container">
+                        <div class="logo-slider-track">
+                            <div class="logo-slider-item">
+                                <img src="Featured Logos/Forbes.png" alt="Forbes" />
+                            </div>
+                            <div class="logo-slider-item">
+                                <img src="Featured Logos/Bloomberg.png" alt="Bloomberg" />
+                            </div>
+                            <div class="logo-slider-item">
+                                <img src="Featured Logos/Khaleej Times.png" alt="Khaleej Times" />
+                            </div>
+                            <div class="logo-slider-item">
+                                <img src="Featured Logos/Yahoo Finance.png" alt="Yahoo Finance" />
+                            </div>
+                            <!-- Duplicate logos for seamless infinite loop -->
+                            <div class="logo-slider-item">
+                                <img src="Featured Logos/Forbes.png" alt="Forbes" />
+                            </div>
+                            <div class="logo-slider-item">
+                                <img src="Featured Logos/Bloomberg.png" alt="Bloomberg" />
+                            </div>
+                            <div class="logo-slider-item">
+                                <img src="Featured Logos/Khaleej Times.png" alt="Khaleej Times" />
+                            </div>
+                            <div class="logo-slider-item">
+                                <img src="Featured Logos/Yahoo Finance.png" alt="Yahoo Finance" />
+                            </div>
+                            <!-- Additional duplicates to ensure full coverage -->
+                            <div class="logo-slider-item">
+                                <img src="Featured Logos/Forbes.png" alt="Forbes" />
+                            </div>
+                            <div class="logo-slider-item">
+                                <img src="Featured Logos/Bloomberg.png" alt="Bloomberg" />
+                            </div>
+                            <div class="logo-slider-item">
+                                <img src="Featured Logos/Khaleej Times.png" alt="Khaleej Times" />
+                            </div>
+                            <div class="logo-slider-item">
+                                <img src="Featured Logos/Yahoo Finance.png" alt="Yahoo Finance" />
+                            </div>
+                            <div class="logo-slider-item">
+                                <img src="Featured Logos/Forbes.png" alt="Forbes" />
+                            </div>
+                            <div class="logo-slider-item">
+                                <img src="Featured Logos/Bloomberg.png" alt="Bloomberg" />
+                            </div>
+                            <div class="logo-slider-item">
+                                <img src="Featured Logos/Khaleej Times.png" alt="Khaleej Times" />
+                            </div>
+                            <div class="logo-slider-item">
+                                <img src="Featured Logos/Yahoo Finance.png" alt="Yahoo Finance" />
+                            </div>
+                            <!-- More duplicates to ensure complete screen coverage -->
+                            <div class="logo-slider-item">
+                                <img src="Featured Logos/Forbes.png" alt="Forbes" />
+                            </div>
+                            <div class="logo-slider-item">
+                                <img src="Featured Logos/Bloomberg.png" alt="Bloomberg" />
+                            </div>
+                            <div class="logo-slider-item">
+                                <img src="Featured Logos/Khaleej Times.png" alt="Khaleej Times" />
+                            </div>
+                            <div class="logo-slider-item">
+                                <img src="Featured Logos/Yahoo Finance.png" alt="Yahoo Finance" />
+                            </div>
+                            <div class="logo-slider-item">
+                                <img src="Featured Logos/Forbes.png" alt="Forbes" />
+                            </div>
+                            <div class="logo-slider-item">
+                                <img src="Featured Logos/Bloomberg.png" alt="Bloomberg" />
+                            </div>
+                            <div class="logo-slider-item">
+                                <img src="Featured Logos/Khaleej Times.png" alt="Khaleej Times" />
+                            </div>
+                            <div class="logo-slider-item">
+                                <img src="Featured Logos/Yahoo Finance.png" alt="Yahoo Finance" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chapter-cta">
+                <button class="btn-secondary" onclick="scrollToSection('testimonials')">See What We've Done</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission + Story Horizontal Section -->
+    <section id="mission-story" class="chapter mission-story">
+        <div class="grain-overlay"></div>
+        <div class="ms-horizontal">
+            <!-- Panel: Our Mission -->
+            <div class="panel panel-mission">
+                <div class="container">
+                    <div class="about-text">
+                        <h3>Our Mission</h3>
+                        <p>To transform real estate professionals into trusted public figures. By securing high-impact PR and strategic media placements in the world's most influential publications, we aim to build personal brands that create authority, trust, and sustainable business growth.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Panel: Our Story -->
+            <div class="panel panel-story">
+                <div class="container">
+                    <div class="about-text">
+                        <h3>Our Story</h3>
+                        <p>Founded in Texas's dynamic real estate landscape, StatusbuiltPR was born from a simple truth: in luxury markets, perception is everything. We've mastered the art of getting our clients featured in publications that matter most to high-net-worth buyers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <!-- Chapter 4: Client Testimonials & Social Proof -->
+    <section id="testimonials" class="chapter testimonials">
+        <div class="container">
+            <div class="chapter-header">
+                <h2 class="chapter-title">Real Success Stories</h2>
+                <div class="chapter-line"></div>
+            </div>
+            
+
+
+            <!-- Testimonials Grid -->
+            <div class="testimonials-showcase">
+                <h3>What Our Clients Say</h3>
+                
+                <!-- Desktop: Compact Grid Layout -->
+                <div class="testimonials-grid desktop-only">
+                    <!-- Row 1 -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-image">
+                            <img src="Testimonials_Client Proof/Alex Kowtun/alex.png" alt="Alex Kowtun">
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"When I secured my Forbes Council feature, it wasn't luck—it was StatusbuiltPR's precision PR strategy that made it happen. They don't just land placements, they elevate credibility and visibility with results you can measure."</p>
+                            <div class="testimonial-author">
+                                <strong>Alex Kowtun</strong>
+                                <span>Entrepreneur | Investor</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <div class="testimonial-image">
+                            <img src="Testimonials_Client Proof/Andy/Andy-Daro-r0bsd1mh5afuen5he0aoeb0a8ricy8si0ju7x6hol4.png" alt="Andy Daro">
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Seeing The Island Walk Project featured in Entrepreneur was the direct result of StatusbuiltPR's targeted PR strategy and their drive to push Texas's initiative into the spotlight. They shaped the story, secured the placement, and helped our municipal vision attract serious attention."</p>
+                            <div class="testimonial-author">
+                                <strong>Andy Daro</strong>
+                                <span>Real Estate Developer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <div class="testimonial-image">
+                            <img src="Testimonials_Client Proof/Dhirendra/new-dhirendra-singh-768x458.png" alt="Dhirendra Singh">
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Thanks to StatusbuiltPR's strategic storytelling and targeted outreach, my transition from hospitality trainer to global coaching authority was featured on The India Saga and resonated across continents. Their PR approach wasn't flashy—it moved the needle by securing coverage that truly captured my journey and impact."</p>
+                            <div class="testimonial-author">
+                                <strong>Dhirendra Singh</strong>
+                                <span>Hospitality Industry Trainer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-image">
+                            <img src="Testimonials_Client Proof/Frantisek/FRANTISEK-r0bsbqmk9i1fuugh1v2oq4dev8tpyb86t8rlzkehq0.png" alt="Frantisek">
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Securing my recognition across platforms—Forbes, Entrepreneur, International Business Times—was only possible thanks to StatusbuiltPR's laser‑targeted PR and expert storytelling. They don't just boost visibility—they helped me earn credibility in a crowded crypto world."</p>
+                            <div class="testimonial-author">
+                                <strong>Frantisek</strong>
+                                <span>Crypto Investor</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <div class="testimonial-image">
+                            <img src="Testimonials_Client Proof/Gerry/new-GERRY-GADOURY-r0bsbtg282rd8yxnjz77n45mbnk3wgx46h6ed6b6pk.png" alt="Gerry Gadoury">
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"The Destination Employer feature in NY Weekly isn't chance—it reflects StatusbuiltPR's precision-targeted approach in telling my story to the right editorial decision-makers. They worked methodically to highlight the E‑F‑G leadership framework and landed exposure that aligned perfectly with my vision for transforming talent strategy."</p>
+                            <div class="testimonial-author">
+                                <strong>Gerry Gadoury</strong>
+                                <span>Executive Coach</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <div class="testimonial-image">
+                            <img src="Testimonials_Client Proof/Hamzah/Hamzeh-Kassab-r0bsga6goqveeag6heoezhlfwjjvgpn7skqffhov5k.png" alt="Hamzah Kassab">
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"My NY Weekly feature wouldn't have happened without StatusbuiltPR's strategic storytelling and relentless follow‑through—they turned my Move Weight mission into real visibility. Their PR work reflected my values: authentic, disciplined, and results‑driven."</p>
+                            <div class="testimonial-author">
+                                <strong>Hamzah Kassab</strong>
+                                <span>Entrepreneur</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-image">
+                            <img src="Testimonials_Client Proof/Hanah/HANA-CHA-r0bsbsi8n640i2dqqvvxv3wc20kgdpfnhi2ky4bpdk.png" alt="Hana Cha">
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"My wedding announcement in The New York Times (celebrating my April 9, 2022 wedding to Anthony Elfering in Beachwood, Ohio) was made possible by StatusbuiltPR's precise media outreach and compelling storytelling. Their work ensured my personal milestone was shared with elegance and authenticity."</p>
+                            <div class="testimonial-author">
+                                <strong>Hana Cha</strong>
+                                <span>Management Consultant</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <div class="testimonial-image">
+                            <img src="Testimonials_Client Proof/Karan/new-karan-bindra-1-768x462.png" alt="Karan Bindra">
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"My firm's feature in the Free Press Journal—celebrating KIAA, LLP's progressive, people‑first legal model—was made possible by StatusbuiltPR's precise media targeting and narrative clarity. Their approach isn't about buzz—it's about positioning us as thought leaders in India's evolving legal landscape."</p>
+                            <div class="testimonial-author">
+                                <strong>Karan Bindra</strong>
+                                <span>Founder | CEO</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <div class="testimonial-image">
+                            <img src="Testimonials_Client Proof/Luis/new-Luis-Faiardo-r0bsbrkdueoslr0duydyi4mp4vtdh2pni7vfemdz20.png" alt="Luis Faiardo">
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"My feature in New York Weekly—which chronicled how I went from obscurity to launching Funded Capital—was entirely due to StatusbuiltPR's strategic PR execution and powerful storytelling. Their work not only secured the placement, but crafted the narrative that made my journey resonate with investors nationwide."</p>
+                            <div class="testimonial-author">
+                                <strong>Luis Faiardo</strong>
+                                <span>Founder</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 4 -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-image">
+                            <img src="Testimonials_Client Proof/Markus/Untitled-design-16-r0bsbk1obqei0vbb2v4xy6j0dsufrhvst6njkep4fs.png" alt="Markus">
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Landing the TechBullion story about NYBA Media was down to StatusbuiltPR's disciplined outreach and clarity of message—they understood our value proposition and made sure it landed. Their PR execution helped shift us from digital agency to thought leadership status."</p>
+                            <div class="testimonial-author">
+                                <strong>Markus</strong>
+                                <span>Luxury Real Estate Texas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <div class="testimonial-image">
+                            <img src="Testimonials_Client Proof/Micheal Holt/new-michael-holt-r0bsblxcpeh2o38krvy7361xkkl66w39hfyiiymc3c.png" alt="Michael Holt">
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"My feature in New York Weekly—highlighting the historic Mayfair mansion listed for £35 million—came through only because StatusbuiltPR got the timing, message, and media right. Their PR work elevated the story from listing to legacy, reaching the exact buyers and publications that matter."</p>
+                            <div class="testimonial-author">
+                                <strong>Michael Holt</strong>
+                                <span>Associate Broker</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <div class="testimonial-image">
+                            <img src="Testimonials_Client Proof/Nicholas/Untitled-design-9-r0bsbw9kskv87stk3if3clg03t67jk8b6v4ut0706w.png" alt="Nicholas">
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"The NY Weekly piece on how I steered Cormier Media through pandemic upheaval happened because StatusbuiltPR honed in on our agility and growth mindset. They didn't just place the story—they spotlighted the narrative that sets us apart."</p>
+                            <div class="testimonial-author">
+                                <strong>Nicholas</strong>
+                                <span>Founder</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 5 -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-image">
+                            <img src="Testimonials_Client Proof/Prashant/PRASHANT-PITTI-r0bsbsi818q2xcz0pgsl2me5q9oqortduciwvwckvs.png" alt="Prashant Pitti">
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"The MSME-focused feature that highlighted Optimo Loan's mission to bridge India's rural credit gap came to life thanks to StatusbuiltPR's focused outreach and authentic messaging. Their PR execution positioned our fintech startup as a credible force in uplifting underserved business communities."</p>
+                            <div class="testimonial-author">
+                                <strong>Prashant Pitti</strong>
+                                <span>Founder and CEO</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <div class="testimonial-image">
+                            <img src="Testimonials_Client Proof/Preston/preston-r0m2ue2p3y9eezwvnndkj687t7fh7a4oqa80dd2px4.png" alt="Preston">
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"My Disrupt Magazine feature on Citadel Esports Cafe & Academy happened only because StatusbuiltPR understood the nuance in my identity—as combat veteran turned entrepreneur and pro gamer—and translated that into a compelling narrative. Their media outreach didn't just secure coverage; it positioned my venture as a game‑changer in both esports and veteran entrepreneurship."</p>
+                            <div class="testimonial-author">
+                                <strong>Preston</strong>
+                                <span>Founder</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <div class="testimonial-image">
+                            <img src="Testimonials_Client Proof/Robert F/Robert-Funks-768x384.png" alt="Robert Funks">
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Entrepreneur feature brought me international recognition. The ROI was immediate."</p>
+                            <div class="testimonial-author">
+                                <strong>Robert Funks</strong>
+                                <span>Fitness Entrepreneur</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="testimonial-item">
+                        <div class="testimonial-image">
+                            <img src="Testimonials_Client Proof/Samuel Leeds/Samuel-Leeds.png" alt="Samuel Leeds">
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"My spotlight feature across major media channels—championing how I scaled from zero to a £20 million property portfolio by deal‑sourcing and strategic wins—was made possible by StatusbuiltPR's insight into my story and its media fit. Their PR choreography didn't just land coverage—it captured the empirical edge that distinguishes real investors from sales pitches."</p>
+                            <div class="testimonial-author">
+                                <strong>Samuel Leeds</strong>
+                                <span>Property Investor</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                
+                <!-- Mobile: Compact Grid Layout -->
+                <div class="testimonials-grid-mobile mobile-only">
+                    <!-- Mobile testimonials will be loaded dynamically -->
+                </div>
+            </div>
+
+            <div class="chapter-cta">
+                <button class="btn-primary" onclick="scrollToSection('services')">Choose Your Package</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile-Only Instagram Story Testimonials Section -->
+    <section id="mobile-testimonials" class="chapter mobile-testimonials mobile-only">
+        <div class="container">
+            <div class="chapter-header">
+                <h2 class="chapter-title">Real Success Stories</h2>
+                <div class="chapter-line"></div>
+            </div>
+            
+            <div class="mobile-testimonials-carousel">
+                <div class="carousel-header">
+                    <h3>See What Our Clients Achieved</h3>
+                    <p>Swipe through real results from real people</p>
+                </div>
+                
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <!-- Allie Lutz -->
+                        <div class="carousel-slide active">
+                            <div class="slide-content">
+                                <div class="testimonial-image">
+                                    <img src="More Testimonials Instagram story sized/allielutz.jpg" alt="Allie Lutz Success Story" />
+                                </div>
+                                <div class="testimonial-text">
+                                    <h4>Allie Lutz</h4>
+                                    <p>"Transformed from local agent to recognized authority in luxury real estate."</p>
+                                    <div class="achievement-badge">
+                                        <span>🎯 Featured in Top Publications</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Chris Cortazzo -->
+                        <div class="carousel-slide">
+                            <div class="slide-content">
+                                <div class="testimonial-image">
+                                    <img src="More Testimonials Instagram story sized/chris cortazzo.jpg" alt="Chris Cortazzo Success Story" />
+                                </div>
+                                <div class="testimonial-text">
+                                    <h4>Chris Cortazzo</h4>
+                                    <p>"Built a personal brand that attracts high-net-worth clients automatically."</p>
+                                    <div class="achievement-badge">
+                                        <span>💎 Luxury Market Leader</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Lovetricia Lee -->
+                        <div class="carousel-slide">
+                            <div class="slide-content">
+                                <div class="testimonial-image">
+                                    <img src="More Testimonials Instagram story sized/lovetricialee.jpg" alt="Lovetricia Lee Success Story" />
+                                </div>
+                                <div class="testimonial-text">
+                                    <h4>Lovetricia Lee</h4>
+                                    <p>"From unknown to industry influencer in just 6 months."</p>
+                                    <div class="achievement-badge">
+                                        <span>🚀 Rapid Growth Success</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Miachel Bacon -->
+                        <div class="carousel-slide">
+                            <div class="slide-content">
+                                <div class="testimonial-image">
+                                    <img src="More Testimonials Instagram story sized/Miachel Bacon.jpg" alt="Miachel Bacon Success Story" />
+                                </div>
+                                <div class="testimonial-text">
+                                    <h4>Miachel Bacon</h4>
+                                    <p>"Secured media coverage that positioned me as the go-to expert."</p>
+                                    <div class="achievement-badge">
+                                        <span>📰 Media Authority</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Miachel -->
+                        <div class="carousel-slide">
+                            <div class="slide-content">
+                                <div class="testimonial-image">
+                                    <img src="More Testimonials Instagram story sized/miachel.jpg" alt="Miachel Success Story" />
+                                </div>
+                                <div class="testimonial-text">
+                                    <h4>Miachel</h4>
+                                    <p>"Created a personal brand that generates leads without cold calling."</p>
+                                    <div class="achievement-badge">
+                                        <span>🎭 Personal Brand Expert</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Noah Merriby -->
+                        <div class="carousel-slide">
+                            <div class="slide-content">
+                                <div class="testimonial-image">
+                                    <img src="More Testimonials Instagram story sized/Noah Merriby.jpg" alt="Noah Merriby Success Story" />
+                                </div>
+                                <div class="testimonial-text">
+                                    <h4>Noah Merriby</h4>
+                                    <p>"Established credibility that opened doors to exclusive opportunities."</p>
+                                    <div class="achievement-badge">
+                                        <span>🔑 Exclusive Access</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Richard Blanco -->
+                        <div class="carousel-slide">
+                            <div class="slide-content">
+                                <div class="testimonial-image">
+                                    <img src="More Testimonials Instagram story sized/richard blanco.jpg" alt="Richard Blanco Success Story" />
+                                </div>
+                                <div class="testimonial-text">
+                                    <h4>Richard Blanco</h4>
+                                    <p>"Built trust and authority that clients seek out automatically."</p>
+                                    <div class="achievement-badge">
+                                        <span>🤝 Trust Builder</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tamarah -->
+                        <div class="carousel-slide">
+                            <div class="slide-content">
+                                <div class="testimonial-image">
+                                    <img src="More Testimonials Instagram story sized/tamarah.jpg" alt="Tamarah Success Story" />
+                                </div>
+                                <div class="testimonial-text">
+                                    <h4>Tamarah</h4>
+                                    <p>"Created a media presence that speaks for itself."</p>
+                                    <div class="achievement-badge">
+                                        <span>📢 Media Presence</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- The King of Texas Real Estate -->
+                        <div class="carousel-slide">
+                            <div class="slide-content">
+                                <div class="testimonial-image">
+                                    <img src="More Testimonials Instagram story sized/thekingofmeamirealestate.jpg" alt="The King of Texas Real Estate Success Story" />
+                                </div>
+                                <div class="testimonial-text">
+                                    <h4>The King of Texas Real Estate</h4>
+                                    <p>"Dominating the Texas luxury market with strategic media positioning."</p>
+                                    <div class="achievement-badge">
+                                        <span>👑 Market Dominator</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- The King of Texas -->
+                        <div class="carousel-slide">
+                            <div class="slide-content">
+                                <div class="testimonial-image">
+                                    <img src="More Testimonials Instagram story sized/thekingofmiami.jpg" alt="The King of Texas Success Story" />
+                                </div>
+                                <div class="testimonial-text">
+                                    <h4>The King of Texas</h4>
+                                    <p>"Established as the premier authority in Texas's luxury real estate."</p>
+                                    <div class="achievement-badge">
+                                        <span>🏆 Premier Authority</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carousel Navigation -->
+                <div class="carousel-navigation">
+                    <button class="carousel-prev" onclick="prevCarouselSlide()" aria-label="Previous testimonial">
+                        <span>‹</span>
+                    </button>
+                    <div class="carousel-dots">
+                        <span class="dot active" onclick="goToSlide(0)"></span>
+                        <span class="dot" onclick="goToSlide(1)"></span>
+                        <span class="dot" onclick="goToSlide(2)"></span>
+                        <span class="dot" onclick="goToSlide(3)"></span>
+                        <span class="dot" onclick="goToSlide(4)"></span>
+                        <span class="dot" onclick="goToSlide(5)"></span>
+                        <span class="dot" onclick="goToSlide(6)"></span>
+                        <span class="dot" onclick="goToSlide(7)"></span>
+                        <span class="dot" onclick="goToSlide(8)"></span>
+                        <span class="dot" onclick="goToSlide(9)"></span>
+                    </div>
+                    <button class="carousel-next" onclick="nextCarouselSlide()" aria-label="Next testimonial">
+                        <span>›</span>
+                    </button>
+                </div>
+                
+                <!-- Swipe Instructions -->
+                <div class="swipe-instructions">
+                    <div class="swipe-icon">👆</div>
+                    <p>Swipe left or right to explore more success stories</p>
+                </div>
+            </div>
+            
+            <div class="chapter-cta">
+                <button class="btn-primary" onclick="scrollToSection('services')">Start Your Success Story</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapter 5: Choose Your Ticket to Fame -->
+    <section id="services" class="chapter services">
+        <div class="container">
+            <div class="chapter-header">
+                <h2 class="chapter-title">Choose Your Ticket to Fame</h2>
+                <div class="chapter-line"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card silver" onclick="openServiceModal('silver')">
+                    <div class="card-header">
+                        <h3>Silver</h3>
+                        <div class="tier-badge silver-badge">Silver</div>
+                    </div>
+                    <div class="card-content">
+                        <h4>Medium / Time Bulletin / US Times Now</h4>
+                        <ul>
+                            <li>One-time fee for guaranteed publication</li>
+                            <li>Professional article writing and editing</li>
+                            <li>Direct submission to target publications</li>
+                            <li>Publication within 7-14 days</li>
+                        </ul>
+                        <div class="card-price">
+                            <img src="pricing images/silver.png" alt="Silver Package - 300 NZD" class="price-ticket">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card gold" onclick="openServiceModal('gold')">
+                    <div class="card-header">
+                        <h3>Gold</h3>
+                        <div class="tier-badge gold-badge">Gold</div>
+                    </div>
+                    <div class="card-content">
+                        <h4>Digital Journal / Time Business News / Fox Interviewer / Voyage NY</h4>
+                        <ul>
+                            <li>One-time fee for guaranteed publication</li>
+                            <li>Professional article writing and editing</li>
+                            <li>Direct submission to target publications</li>
+                            <li>Publication within 7-14 days</li>
+                        </ul>
+                        <div class="card-price">
+                            <img src="pricing images/gold.png" alt="Gold Package - 410 NZD" class="price-ticket">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card platinum" onclick="openServiceModal('platinum')">
+                    <div class="card-header">
+                        <h3>Platinum</h3>
+                        <div class="tier-badge platinum-badge">Platinum</div>
+                    </div>
+                    <div class="card-content">
+                        <h4>Real Estate Today / CEO Weekly / NY Weekly / The Wall Street Times</h4>
+                        <ul>
+                            <li>One-time fee for guaranteed publication</li>
+                            <li>Professional article writing and editing</li>
+                            <li>Direct submission to target publications</li>
+                            <li>Publication within 7-14 days</li>
+                        </ul>
+                        <div class="card-price">
+                            <img src="pricing images/platinum.png" alt="Platinum Package - 700 NZD" class="price-ticket">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Black Ticket Section -->
+    <section class="black-ticket-section">
+        <div class="container">
+            <div class="chapter-header">
+                <h2 class="chapter-title">The Ultimate Experience</h2>
+                <div class="chapter-line"></div>
+            </div>
+            <div class="black-ticket-container">
+                <div class="service-card black horizontal-layout" onclick="openServiceModal('black')">
+                    <div class="black-content-column">
+                        <div class="card-header">
+                            <h3>Black</h3>
+                            <div class="tier-badge black-badge">Black</div>
+                        </div>
+                        <div class="card-content">
+                            <h4>Invite-Only Ultra-Premium</h4>
+                            <ul>
+                                <li>Everything in Platinum</li>
+                                <li>Custom media strategy</li>
+                                <li>Exclusive events access</li>
+                                <li>Dedicated PR manager</li>
+                                <li>Crisis management support</li>
+                                <li>Personal media coaching</li>
+                                <li>VIP networking events</li>
+                            </ul>
+                            <div class="black-cta">
+                                <p class="black-description">The most exclusive package for those who demand the absolute best in PR representation.</p>
+                                <button class="btn-primary black-btn">Contact for Pricing</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="black-model-column">
+                        <div class="black-3d-model">
+                            <div id="black-credit-card-model">
+                                <div class="black-model-loading">
+                                    <div class="black-loading-spinner"></div>
+                                    <p>Loading 3D Model...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapter 6: Play With the Press -->
+    <!-- <section id="tools" class="chapter tools">
+        <div class="container">
+            <div class="chapter-header">
+                <h2 class="chapter-title">Play With the Press</h2>
+                <div class="chapter-line"></div>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3>Article Simulator</h3>
+                    <p>See how your story would look in top publications</p>
+                    <button class="btn-tool" onclick="openArticleSimulator()">Try It</button>
+                </div>
+                <div class="tool-card">
+                    <h3>Fame Score Calculator</h3>
+                    <p>Calculate your current media presence score</p>
+                    <button class="btn-tool" onclick="openFameCalculator()">Calculate</button>
+                </div>
+                <div class="tool-card">
+                    <h3>Headline Generator</h3>
+                    <p>Generate compelling headlines for your story</p>
+                    <button class="btn-tool" onclick="openHeadlineGenerator()">Generate</button>
+                </div>
+            </div>
+            <div class="chapter-cta">
+                <button class="btn-primary" onclick="scrollToSection('contact')">Make It Real</button>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Chapter 7: Let's Make It Happen -->
+    <section id="contact" class="chapter contact">
+        <div class="container">
+            <div class="chapter-header">
+                <h2 class="chapter-title">Let's Make It Happen</h2>
+                <div class="chapter-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Ready to Get Featured?</h3>
+                    <p>Book a call with our team to discuss your PR strategy and choose the perfect package for your goals.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <span class="method-icon">👤</span>
+                            <span>Owner: Daniel Martinez Grijalva</span>
+                        </div>
+                        <div class="contact-method">
+                            <span class="method-icon">✉️</span>
+                            <span>hello@Prestigepositioning.com</span>
+                        </div>
+                        <div class="contact-method">
+                            <span class="method-icon">💬</span>
+                            <span>Instagram: @Prestigepositioning</span>
+                        </div>
+                    </div>
+                    <div class="trust-badge">
+                        <span>Avg response time: under 24h</span>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <!-- Airtable Embedded Form -->
+                    <div class="airtable-form-container">
+                        <iframe 
+                            class="airtable-embed" 
+                            src="https://airtable.com/embed/appYy47aQFqHqmHtF/shrnWlRoZvvM5Fo97?backgroundColor=black&textColor=white"
+                            frameborder="0" 
+                            onmousewheel="" 
+                            width="100%" 
+                            height="533" 
+                            style="background: transparent; border: 1px solid #ccc;">
+                        </iframe>
+                    </div>
+                    
+                    <!-- Fallback Contact Info -->
+                    <div class="contact-fallback">
+                        <p><strong>Prefer to contact us directly?</strong></p>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <span class="method-icon">👤</span>
+                                <span>Owner: Daniel Martinez Grijalva</span>
+                            </div>
+                            <div class="contact-method">
+                                <span class="method-icon">✉️</span>
+                                <span>hello@Prestigepositioning.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Modals -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- Tool Modals -->
+    <div id="toolModal" class="modal">
+        <div class="modal-content">
+            <div id="toolModalContent"></div>
+        </div>
+    </div>
+
+    <!-- Privacy Notice -->
+    <div class="privacy-notice">
+        <p>This website uses cookies and analytics to improve your experience. By continuing to use this site, you agree to our use of cookies and analytics tracking.</p>
+        <button onclick="acceptPrivacy()" class="privacy-accept">Accept</button>
+        <button onclick="declinePrivacy()" class="privacy-decline">Decline</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
